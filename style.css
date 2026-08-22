@@ -1,0 +1,10 @@
+body { font-family: 'DM Sans', sans-serif; }
+.font-display { font-family: 'Playfair Display', serif; }
+html { scroll-behavior: smooth; }
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.nav-link { position: relative; }
+.nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #2d8a56; transition: width 0.3s; }
+.nav-link:hover::after { width: 100%; }
+.card-hover { transition: transform 0.3s, box-shadow 0.3s; }
+.card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
