@@ -1,0 +1,404 @@
+/* =========================================
+   GAYA DASAR & LAYOUT UTAMA
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* --- Navigasi --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 20px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav .logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-color: #ecf0f1;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+/* --- Tombol --- */
+.kumpulan-tombol {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 25px;
+    background-color: #2980b9;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #34495e;
+    transform: translateY(-2px);
+}
+
+.btn-fb {
+    background-color: #1877F2;
+}
+
+.btn-fb:hover {
+    background-color: #145dbf;
+}
+
+.btn-tema {
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+/* --- Profil & Kartu --- */
+.profil {
+    padding: 80px 5%;
+    background-color: #ffffff;
+}
+
+.profil-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.profil-header h2 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.profil-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.profil-card {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.profil-card:hover {
+    transform: translateY(-5px);
+}
+
+.profil-card h3 {
+    color: #2980b9;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* --- APBDesa Section --- */
+.apbdesa {
+    padding: 80px 5%;
+    background-color: #f4f7f6;
+}
+
+.apbdesa-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.apbdesa-header h2 {
+    font-size: 36px;
+    color: #2c3e50;
+}
+
+.total-anggaran {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+    transition: transform 0.3s;
+}
+
+.total-anggaran:hover {
+    transform: scale(1.05);
+}
+
+.angka-besar {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.sumber-dana {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.dana-card {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    border-bottom: 5px solid #bdc3c7;
+}
+
+.dana-card.dds { border-color: #e74c3c; }
+.dana-card.add { border-color: #2ecc71; }
+.dana-card.dbh { border-color: #f39c12; }
+
+.dana-card h4 {
+    color: #7f8c8d;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.dana-card p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.judul-rincian {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.rincian-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rincian-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.rincian-card:hover {
+    transform: translateY(-8px);
+}
+
+.card-header {
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.card-header h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.card-header span {
+    font-size: 22px;
+    font-weight: bold;
+    background: rgba(0,0,0,0.2);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.bidang-1 .card-header { background-color: #34495e; }
+.bidang-2 .card-header { background-color: #e74c3c; }
+.bidang-3 .card-header { background-color: #e67e22; }
+.bidang-4 .card-header { background-color: #27ae60; }
+
+.rincian-card ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.rincian-card ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px dashed #ddd;
+    font-size: 14px;
+    color: #555;
+}
+
+.rincian-card ul li:last-child {
+    border-bottom: none;
+}
+
+.rincian-card ul li span {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 5%;
+}
+
+/* =========================================
+   MODE GELAP (DARK MODE)
+   ========================================= */
+body.tema-gelap {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.tema-gelap .hero {
+    background-color: #1e1e1e;
+}
+
+body.tema-gelap .hero h1,
+body.tema-gelap .profil-header h2,
+body.tema-gelap .apbdesa-header h2,
+body.tema-gelap .judul-rincian {
+    color: #ffffff;
+}
+
+body.tema-gelap .profil,
+body.tema-gelap .apbdesa {
+    background-color: #121212;
+}
+
+body.tema-gelap .profil-card,
+body.tema-gelap .dana-card,
+body.tema-gelap .rincian-card {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 15px rgba(255,255,255,0.02);
+}
+
+body.tema-gelap .profil-card h3 {
+    color: #64b5f6;
+}
+
+body.tema-gelap .dana-card p,
+body.tema-gelap .rincian-card ul li span {
+    color: #f1f1f1;
+}
+
+body.tema-gelap .rincian-card ul li {
+    color: #bbb;
+    border-bottom-color: #444;
+}
+
+body.tema-gelap nav,
+body.tema-gelap footer {
+    background-color: #000000;
+}
+
+/* =========================================
+   RESPONSIF (TABLET & HP)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    nav ul {
+        margin: 15px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 5px 10px;
+    }
+    .hero h1 {
+        font-size: 32px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+    .kumpulan-tombol {
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn {
+        width: 100%;
+    }
+    .profil, .apbdesa {
+        padding: 50px 5%;
+    }
+}
