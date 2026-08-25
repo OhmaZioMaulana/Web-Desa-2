@@ -8,3 +8,18 @@ html { scroll-behavior: smooth; }
 .nav-link:hover::after { width: 100%; }
 .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
 .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
+/* --- Tampilan Scrollbar UMKM --- */
+.hide-scrollbar::-webkit-scrollbar {
+    height: 8px;
+}
+.hide-scrollbar::-webkit-scrollbar-track {
+    background: #f5f0e8; 
+    border-radius: 4px;
+}
+.hide-scrollbar::-webkit-scrollbar-thumb {
+    background: #2d8a56; 
+    border-radius: 4px;
+}
+.hide-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #1a5c38; 
+}

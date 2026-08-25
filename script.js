@@ -55,5 +55,17 @@ document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
         }
     });
 })();
+// Logika Tombol Geser Katalog UMKM
+const umkmContainer = document.getElementById('umkm-container');
+const umkmPrev = document.getElementById('umkm-prev');
+const umkmNext = document.getElementById('umkm-next');
 
+if (umkmContainer && umkmPrev && umkmNext) {
+    umkmPrev.addEventListener('click', () => {
+        umkmContainer.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+    umkmNext.addEventListener('click', () => {
+        umkmContainer.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+}
 lucide.createIcons();

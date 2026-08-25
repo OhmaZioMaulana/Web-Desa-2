@@ -49,7 +49,7 @@
     <h1 data-template-id="hero-title" class="canva-text font-display text-white text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 32px;">Desa Mongkoinit Barat</h1>
     <p data-template-id="hero-subtitle" class="canva-text text-white/90 text-lg md:text-xl max-w-2xl mb-2" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Kecamatan Lolak, Kabupaten Bolaang Mongondow, Sulawesi Utara</p>
     <p data-template-id="hero-slogan" class="canva-text text-yellow-200 italic text-base md:text-lg mb-8" style="color: rgb(253, 230, 138); font-weight: 400; font-style: italic; font-size: 16px;">"Membangun Bersama, Sejahtera untuk Semua"</p>
-    <div class="flex flex-wrap gap-3 justify-center"><a href="#potensi" data-template-id="hero-cta-1" class="canva-button px-6 py-3 bg-leaf text-white rounded-lg font-medium hover:bg-forest transition-colors shadow-lg" style="background: rgb(45, 138, 86); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">Jelajahi Potensi</a> <a href="#potensi" data-template-id="hero-cta-2" class="canva-button px-6 py-3 bg-white text-forest rounded-lg font-medium hover:bg-sand transition-colors shadow-lg" style="background: rgb(255, 255, 255); color: rgb(26, 92, 56); font-weight: 600; font-style: normal; font-size: 16px;">Katalog UMKM</a> <a href="#kontak" data-template-id="hero-cta-3" class="canva-button px-6 py-3 border-2 border-white text-white rounded-lg font-medium hover:bg-white/10 transition-colors" style="color: rgb(255, 255, 255); font-weight: 500; font-style: normal; font-size: 16px;">Hubungi Kami</a>
+    <div class="flex flex-wrap gap-3 justify-center"><a href="#potensi" data-template-id="hero-cta-1" class="canva-button px-6 py-3 bg-leaf text-white rounded-lg font-medium hover:bg-forest transition-colors shadow-lg" style="background: rgb(45, 138, 86); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">Jelajahi Potensi</a> <a href="#umkm" data-template-id="hero-cta-2" class="canva-button px-6 py-3 bg-white text-forest rounded-lg font-medium hover:bg-sand transition-colors shadow-lg" style="background: rgb(255, 255, 255); color: rgb(26, 92, 56); font-weight: 600; font-style: normal; font-size: 16px;">Katalog UMKM</a> <a href="#kontak" data-template-id="hero-cta-3" class="canva-button px-6 py-3 border-2 border-white text-white rounded-lg font-medium hover:bg-white/10 transition-colors" style="color: rgb(255, 255, 255); font-weight: 500; font-style: normal; font-size: 16px;">Hubungi Kami</a>
     </div>
     <div class="mt-10 flex gap-8 text-white text-center">
      <div>
@@ -164,7 +164,7 @@
        </div>
       </div>
      </div>
-     <div class="text-center mt-10"><a href="#kontak" data-template-id="potensi-cta" class="canva-button inline-block px-8 py-4 bg-forest text-white text-lg font-bold rounded-xl hover:bg-leaf transition-colors shadow-lg" style="background: rgb(26, 92, 56); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 18px;">Lihat Katalog UMKM</a>
+     <div class="text-center mt-10"><a href="#umkm" data-template-id="potensi-cta" class="canva-button inline-block px-8 py-4 bg-forest text-white text-lg font-bold rounded-xl hover:bg-leaf transition-colors shadow-lg" style="background: rgb(26, 92, 56); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 18px;">Lihat Katalog UMKM</a>
      </div>
     </div>
    </section><!-- Fasilitas -->
@@ -313,6 +313,85 @@
         Terjadi kesalahan. Silakan coba lagi.
        </div>
       </div>
+     </div>
+    </div>
+   </section>
+   <!-- Katalog UMKM (Slider Geser) -->
+   <section id="umkm" class="py-20 px-4 bg-forest/5">
+    <div class="max-w-6xl mx-auto reveal">
+     <h2 class="canva-text font-display text-forest text-center mb-4" style="color: rgb(26, 92, 56); font-weight: 700; font-size: 24px;">Katalog UMKM Desa</h2>
+     <p class="canva-text text-gray-600 text-center max-w-2xl mx-auto mb-10" style="color: rgb(75, 85, 99); font-size: 16px;">Mendukung roda perekonomian desa melalui usaha mikro dan warung milik warga Mongkoinit Barat.</p>
+     
+     <div class="relative group">
+      <!-- Tombol geser kiri -->
+      <button id="umkm-prev" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 md:-ml-6 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-forest hover:bg-leaf hover:text-white transition opacity-0 group-hover:opacity-100 hidden md:flex" aria-label="Geser Kiri">
+        <i data-lucide="chevron-left" style="width:24px;height:24px"></i>
+      </button>
+      
+      <!-- Container Geser -->
+      <div id="umkm-container" class="flex overflow-x-auto gap-6 pb-8 snap-x hide-scrollbar scroll-smooth">
+        
+        <!-- UMKM 1 -->
+        <div class="snap-start shrink-0 w-72 bg-white rounded-2xl overflow-hidden shadow-md card-hover">
+          <img src="WhatsApp Image 2026-08-23 at 09.37.50.jpeg" class="w-full h-48 object-cover" alt="Agen BNI 46">
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 mb-2" style="font-size: 18px;">Agen BNI 46 & Mini ATM</h3>
+            <p class="text-sm text-gray-600">Melayani transaksi perbankan, tarik tunai, transfer, dan pembayaran tagihan untuk kemudahan warga.</p>
+          </div>
+        </div>
+
+        <!-- UMKM 2 -->
+        <div class="snap-start shrink-0 w-72 bg-white rounded-2xl overflow-hidden shadow-md card-hover">
+          <img src="WhatsApp Image 2026-08-23 at 09.38.19 (1).jpeg" class="w-full h-48 object-cover" alt="Kios Bensin">
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 mb-2" style="font-size: 18px;">Kios Bensin & Sembako</h3>
+            <p class="text-sm text-gray-600">Penyedia bahan bakar bensin eceran dan kebutuhan pokok harian dengan lokasi strategis.</p>
+          </div>
+        </div>
+
+        <!-- UMKM 3 -->
+        <div class="snap-start shrink-0 w-72 bg-white rounded-2xl overflow-hidden shadow-md card-hover">
+          <img src="WhatsApp Image 2026-08-23 at 09.38.19.jpeg" class="w-full h-48 object-cover" alt="OTW Barbershop">
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 mb-2" style="font-size: 18px;">OTW Barbershop</h3>
+            <p class="text-sm text-gray-600">Tempat potong rambut pria andalan desa. Siap bikin penampilan warga makin rapi dan kekinian.</p>
+          </div>
+        </div>
+
+        <!-- UMKM 4 -->
+        <div class="snap-start shrink-0 w-72 bg-white rounded-2xl overflow-hidden shadow-md card-hover">
+          <img src="WhatsApp Image 2026-08-23 at 09.38.18 (1).jpeg" class="w-full h-48 object-cover" alt="Toko Kelontong LA">
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 mb-2" style="font-size: 18px;">Toko Kelontong LA</h3>
+            <p class="text-sm text-gray-600">Menyediakan berbagai macam kebutuhan rumah tangga, jajanan, dan kelontong lengkap.</p>
+          </div>
+        </div>
+
+        <!-- UMKM 5 -->
+        <div class="snap-start shrink-0 w-72 bg-white rounded-2xl overflow-hidden shadow-md card-hover">
+          <img src="WhatsApp Image 2026-08-23 at 09.38.18.jpeg" class="w-full h-48 object-cover" alt="Warung Kopi Kayu">
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 mb-2" style="font-size: 18px;">Warung Jajan & Kopi</h3>
+            <p class="text-sm text-gray-600">Tempat bersantai yang nyaman untuk menikmati kopi, minuman dingin, dan aneka jajanan ringan.</p>
+          </div>
+        </div>
+
+        <!-- UMKM 6 -->
+        <div class="snap-start shrink-0 w-72 bg-white rounded-2xl overflow-hidden shadow-md card-hover">
+          <!-- Pastikan nama file gambar terakhir ini disesuaikan jika berbeda -->
+          <img src="WhatsApp Image 2026-08-23 at 09.37.50 (1).jpeg" class="w-full h-48 object-cover" alt="Kios Surya Nusantara">
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 mb-2" style="font-size: 18px;">Kios Surya Nusantara</h3>
+            <p class="text-sm text-gray-600">Menjual berbagai kebutuhan harian dengan beragam promo sembako yang hemat untuk warga.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tombol geser kanan -->
+      <button id="umkm-next" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 md:-mr-6 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-forest hover:bg-leaf hover:text-white transition opacity-0 group-hover:opacity-100 hidden md:flex" aria-label="Geser Kanan">
+        <i data-lucide="chevron-right" style="width:24px;height:24px"></i>
+      </button>
      </div>
     </div>
    </section>
